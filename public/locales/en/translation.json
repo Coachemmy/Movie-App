@@ -1,0 +1,21 @@
+{
+    "navbar": {
+      "brand": "MOVIEERS",
+      "trending": "Trending",
+      "searchPlaceholder": "Search",
+      "searchButton": "🔍"
+    },
+    "home": {
+      "noMoviesFound": "Sorry, No Movies Found"
+    },
+    "footer": {
+        "text": "Movieers ©2025 | ALL rights reserved | Created by Emmanuel Abiola"  
+    },
+    "movieBox": {
+        "viewMore": "View More",
+        "rating": "Rating: {{rating}}/10",
+        "releaseDate": "Release Date: {{date}}",
+        "overview": "Overview: {{overview}}",
+        "close": "Close"
+    }
+  }
