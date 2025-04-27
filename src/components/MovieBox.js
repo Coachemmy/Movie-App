@@ -29,7 +29,7 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview, id
 
   return (
     <div className="shadow-2xl">
-      <img className="w-full z-100 rounded-b-full mt-12 md:h-64 object-cover hover:scale-110" src={API_IMG + poster_path} alt={title} />
+      <img className="w-full z-100 rounded-3xl mt-12 md:h-64 object-cover hover:scale-110" src={API_IMG + poster_path} alt={title} />
       <div className="p-3 cursor-pointer">
         <div className='flex justify-center gap-2 text-white'>
           <h5 className="text-xs md:text-lg lg:text-lg font-bold text-center" onClick={handleShow}>{t('movieBox.viewMore')} </h5>
