@@ -81,6 +81,7 @@ function Home() {
 
     return (
         <>
+
             <NavbarComponent query={query} searchMovie={searchMovie} changeHandler={changeHandler} onLanguageChange={handleLanguageChange} />
             <div className="flex-grow p-4 bg-black">
                 {selectedMovies.length > 0 && (
@@ -103,6 +104,7 @@ function Home() {
 
             <MovieListModal show={showModal} onHide={() => setShowModal(false)} />
         </>
+
     );
 }
 

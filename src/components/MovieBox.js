@@ -35,7 +35,7 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview, id
           <h5 className="text-xs md:text-lg lg:text-lg font-bold text-center" onClick={handleShow}>{t('movieBox.viewMore')} </h5>
           <button
             variant="outline-light"
-            className="text-2xl w-10 rounded-r-full md:pb-2 -translate-y-1 bg-blue-500 hover:bg-blue-400"
+            className="text-2xl w-10 rounded-r-full md:pb-2 -translate-y-1 bg-blue-500 hover:bg-blue-400 "
             onClick={isMovieInList ? () => removeMovie(id) : handleAddToList}
             disabled={isMovieInList}
           >
@@ -44,12 +44,12 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview, id
         </div>
         <Modal show={show} onHide={handleClose} className="animate-fadeIn">
           <Modal.Body className="bg-gray-800 text-white animate-fadeIn">
-            <img className="w-full mb-4" src={API_IMG + poster_path} alt={title} />
-            <div className='flex items-center justify-between text-xl text-green-500'>
+            <img className="w-fit h-fit mb-4" src={API_IMG + poster_path} alt={title} />
+            <div className='flex items-center justify-between text-xs text-green-500'>
               <h5> {t('movieBox.rating', { rating: vote_average })}</h5>
               <h5>{t('movieBox.releaseDate', { date: release_date })}</h5>
             </div>
-            <h6 className="text-sm text-justify">{t('movieBox.overview', { overview: overview })}</h6>
+            <h6 className="text-xs text-justify">{t('movieBox.overview', { overview: overview })}</h6>
           </Modal.Body>
           <Button variant="danger" className='pt-2 pb-2 text-xl !border-none !rounded-none' onClick={handleClose}> {t('movieBox.close')}</Button>
         </Modal>
