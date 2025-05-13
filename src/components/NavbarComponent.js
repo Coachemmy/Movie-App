@@ -29,7 +29,7 @@ const NavbarComponent = ({ query, searchMovie, changeHandler, selectedMoviesCoun
             <Navbar className='bg-black h-20'>
                 <Container fluid>
                     <Navbar.Brand className="text-white">MOVIE<span className="text-red-500">ERS</span></Navbar.Brand>
-                    <Navbar.Brand href="/home" className="text-white">Trending</Navbar.Brand>
+                    {/* <Navbar.Brand href="/home" className="text-white">Trending</Navbar.Brand> */}
                     <Nav className="me-auto my-2 my-lg-3" style={{ maxHeight: '100px' }} navbarScroll></Nav>
                     <OverlayTrigger placement="bottom" overlay={renderTooltip}>
                         <Button
