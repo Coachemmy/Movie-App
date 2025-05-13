@@ -15,4 +15,4 @@ We are committed to creating a welcoming and inclusive environment for everyone.
 
 ## Reporting Issues
 
-If you experience or witness unacceptable behavior, please contact us at [coachemmyb@gmail.com],  [amienabah133@gmail.com], [muhammadgwandu0917@gmail.com]
+If you experience or witness unacceptable behavior, please contact us at [coachemmyb@gmail.com].
