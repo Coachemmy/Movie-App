@@ -118,9 +118,9 @@ function Home() {
             {/* Chatbot toggle button */}
             <button 
                 onClick={() => setShowChatbot(!showChatbot)}
-                className="fixed right-6 top-24 bg-red-600 animate-bounce text-white p-4 rounded-full shadow-lg z-50 hover:bg-red-700 transition-colors flex items-center justify-center w-12 h-12"
+                className="fixed right-6 top-24 bg-red-600 animate-bounce text-white p-4 rounded-lg shadow-lg z-50 hover:bg-red-700 transition-colors flex items-center justify-center w-20 h-10"
             >
-                {showChatbot ? '✕' : 'BOT'}
+                {showChatbot ? '✕' : 'ChatBot'}
             </button>
             <Footer />
 
