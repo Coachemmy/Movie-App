@@ -13,7 +13,7 @@ const Pagination = ({ page, handlePageChange }) => {
 
     const renderPagination = () => {
         const pages = [];
-        const ellipsis = <span className="text-white mx-1">...</span>;
+         const ellipsis = (key) => <span key={`ellipsis-${key}`} className="text-white mx-1">...</span>;
 
         pages.push(
             <Button
@@ -30,7 +30,7 @@ const Pagination = ({ page, handlePageChange }) => {
         const endPage = Math.min(maxPagesToShow - 1, page + 2);
 
         if (startPage > 2) {
-            pages.push(ellipsis);
+             pages.push(ellipsis('left'));
         }
 
         for (let i = startPage; i <= endPage; i++) {
@@ -47,7 +47,7 @@ const Pagination = ({ page, handlePageChange }) => {
         }
 
         if (endPage < maxPagesToShow - 1) {
-            pages.push(ellipsis);
+            pages.push(ellipsis('right'));
         }
 
         if (maxPagesToShow > 1) {
