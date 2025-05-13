@@ -16,7 +16,7 @@ const ChatbotModal = ({ onHide }) => {
         if (window.speechSynthesis.speaking) {
         return; 
       }
-      const utterance = new SpeechSynthesisUtterance("Welcome to Movieers AI Assistant, I am here to help with best movie recommedations");
+      const utterance = new SpeechSynthesisUtterance("Welcome to Movieers, home of best movie recommedations");
       window.speechSynthesis.speak(utterance);
     };
     speakTitle();
@@ -123,7 +123,8 @@ const ChatbotModal = ({ onHide }) => {
       } else {
         setConversation(prev => [
           ...prev,
-          { sender: 'ai', text: "No movies found. Try different keywords?" }
+          { sender: 'ai', 
+            text: "Sure! To give you the best recommendations, could you tell me a bit about your preferences? For example: Favorite genres (e.g., action, sci-fi, comedy, horror, animation, fantasy, drama, thriller)?" }
         ]);
       }
     } catch (error) {
