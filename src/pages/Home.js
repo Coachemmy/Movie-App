@@ -12,6 +12,7 @@ import NavbarComponent from '../components/NavbarComponent.js';
 import { useSearchParams } from 'react-router-dom';
 import { useMovieList } from '../context/MovieListContext.js';
 import MovieListModal from '../components/MovieListModal.js';
+import ChatbotModal from '../components/ChatBotModal.js';
 
 function Home() {
     const { t } = useTranslation();
@@ -26,6 +27,7 @@ function Home() {
     );
     const { selectedMovies } = useMovieList();
     const [showModal, setShowModal] = useState(false);
+    const [showChatbot, setShowChatbot] = useState(false);
 
 
     useEffect(() => {
@@ -81,11 +83,19 @@ function Home() {
 
     return (
         <>
-            <NavbarComponent query={query} searchMovie={searchMovie} changeHandler={changeHandler} onLanguageChange={handleLanguageChange} />
-            <div className="flex-grow p-4 bg-black">
+            <NavbarComponent
+                query={query}
+                searchMovie={searchMovie}
+                changeHandler={changeHandler}
+                onLanguageChange={handleLanguageChange}
+            />
+
+             <div className="flex relative ">
+                {/* Main content */}
+                <div className={`flex-grow p-4 bg-black transition-all duration-300 ${showChatbot ? 'mr-80' : ''}`}>
                 {selectedMovies.length > 0 && (
-                    <div className="fixed bottom-20 z-50 right-4 bg-white text-black p-3 rounded-full shadow-lg cursor-pointer" onClick={() => setShowModal(true)}>
-                        🎬 {selectedMovies.length}
+                    <div className="fixed right-6 bottom-24 bg-white text-black p-4 rounded-full shadow-lg z-50 flex items-center justify-center w-12 h-12 cursor-pointer" onClick={() => setShowModal(true)}>
+                        {selectedMovies.length}
                     </div>
                 )}
                 {isLoading ? (
@@ -99,6 +109,19 @@ function Home() {
                     <NoMoviesFound message={t('home.noMoviesFound')} />
                 )}
             </div>
+            {/* Chatbot sidebar */}
+                <div className={`fixed right-0 top-0 h-full w-1/2 bg-gray-900 border-l border-gray-800 z-50 transition-transform duration-300 ${showChatbot ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <ChatbotModal onHide={() => setShowChatbot(false)} />
+                </div>
+            </div>
+            
+            {/* Chatbot toggle button */}
+            <button 
+                onClick={() => setShowChatbot(!showChatbot)}
+                className="fixed right-6 bottom-40 bg-blue-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-colors flex items-center justify-center w-12 h-12"
+            >
+                {showChatbot ? '✕' : 'AI'}
+            </button>
             <Footer />
 
             <MovieListModal show={showModal} onHide={() => setShowModal(false)} />

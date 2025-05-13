@@ -20,9 +20,9 @@ const ScrollToTop = () => {
   }, [])
 
   return isVisible ? (
-    <div style={{ position: 'fixed', bottom: '20px', right: '16px', padding: '10px' }}>
+    <div style={{ position: 'fixed', bottom: '20px', right: '18px', padding: '4px', zIndex: 1000 }}>
       <a href='#top' aria-label='top'>
-        <BsArrowUp fontSize='large' className='text-5xl bg-white p-2 rounded-full' />
+        <BsArrowUp fontSize='small' className='text-5xl bg-white p-2 rounded-full' />
       </a>
     </div>
   ) : null
