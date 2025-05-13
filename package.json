@@ -6,6 +6,7 @@
   "dependencies": {
     "@babel/plugin-syntax-flow": "^7.26.0",
     "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@google/genai": "^0.13.0",
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/postcss": "^4.0.8",
     "@testing-library/dom": "^10.4.0",
