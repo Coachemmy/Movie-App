@@ -7,7 +7,7 @@ const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const ChatbotModal = ({ onHide }) => {
   const [input, setInput] = useState('');
   const [conversation, setConversation] = useState([
-    { sender: 'ai', text: "Hi! I'm here to help. Ask me anything about movies or AI!" }
+    { sender: 'ai', text: "Hi! I'm here to help. Ask me anything about movies!" }
   ]);
   const [loading, setLoading] = useState(false);
 
