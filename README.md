@@ -1,3 +1,5 @@
+https://github.com/Coachemmy/Movieers/blob/94765f862c689b4140835d8401944c82abc66324/movieers.jpg
+
 # Movieers
 
 Movieers is a web application for discovering and managing your favorite movies.
