@@ -90,11 +90,11 @@ function Home() {
                 onLanguageChange={handleLanguageChange}
             />
 
-             <div className="flex relative ">
+             <div className="flex relative">
                 {/* Main content */}
                 <div className={`flex-grow p-4 bg-black transition-all duration-300 ${showChatbot ? 'mr-80' : ''}`}>
                 {selectedMovies.length > 0 && (
-                    <div className="fixed right-6 bottom-24 bg-white text-black p-4 rounded-full shadow-lg z-50 flex items-center justify-center w-12 h-12 cursor-pointer" onClick={() => setShowModal(true)}>
+                    <div className="fixed right-6 bottom-24 bg-white text-black p-4 rounded-full shadow-lg flex items-center justify-center w-12 h-12 cursor-pointer" onClick={() => setShowModal(true)}>
                         {selectedMovies.length}
                     </div>
                 )}
@@ -118,9 +118,9 @@ function Home() {
             {/* Chatbot toggle button */}
             <button 
                 onClick={() => setShowChatbot(!showChatbot)}
-                className="fixed right-6 bottom-40 bg-blue-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-colors flex items-center justify-center w-12 h-12"
+                className="fixed right-6 top-24 bg-red-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-red-700 transition-colors flex items-center justify-center w-12 h-12"
             >
-                {showChatbot ? '✕' : 'AI'}
+                {showChatbot ? '✕' : 'BOT'}
             </button>
             <Footer />
 
